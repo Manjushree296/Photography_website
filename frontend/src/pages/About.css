@@ -1,0 +1,173 @@
+.about-page {
+  background: #ffffff;
+  padding: 100px 10%;
+  font-family: "Poppins", sans-serif;
+  color: #1a1a1a;
+}
+
+/* ================= HERO ================= */
+
+.about-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  margin-bottom: 130px;
+}
+
+.about-image img {
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.25);
+}
+
+/* Heading */
+
+.about-content h1 {
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 55px;
+  letter-spacing: 1px;
+  color: #0f172a; /* deep charcoal */
+}
+
+/* ================= FEATURES ================= */
+
+.feature-box {
+  display: flex;
+  gap: 26px;
+  margin-bottom: 38px;
+  align-items: flex-start;
+}
+
+.feature-box span {
+  font-size: 34px;
+  color: #0f172a;
+}
+
+.feature-box h3 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  color: #0f172a;
+}
+
+.feature-box p {
+  font-size: 15.5px;
+  color: #334155; /* soft dark slate */
+  line-height: 1.8;
+}
+
+/* ================= TESTIMONIALS ================= */
+
+.testimonials {
+  text-align: center;
+  margin-bottom: 140px;
+}
+
+.testimonials h2 {
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 80px;
+  color: #0f172a;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 45px;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  padding: 40px 32px;
+  border-radius: 16px;
+  box-shadow: 0 14px 45px rgba(0,0,0,0.10);
+  transition: 0.35s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+}
+
+.testimonial-card img {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 18px;
+}
+
+.testimonial-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.testimonial-card p {
+  font-size: 14.5px;
+  color: #475569; /* darker than before */
+  line-height: 1.7;
+}
+
+/* ================= GOOGLE REVIEWS ================= */
+
+.google-review {
+  text-align: center;
+  padding-bottom: 90px;
+}
+
+.google-review img {
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+.stars {
+  font-size: 32px;
+  color: #fbbc04;
+  margin-bottom: 32px;
+}
+
+.review-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+.btn-green {
+  background: #2563eb;
+  color: #ffffff;
+  padding: 16px 42px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: 0.3s ease;
+}
+
+.btn-green:hover {
+  background: #1e40af;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+  .about-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image img {
+    height: 420px;
+  }
+
+  .about-content h1 {
+    font-size: 38px;
+  }
+}

@@ -1,0 +1,339 @@
+/* Pages CSS with Bootstrap Customizations */
+* {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-dark: #ffffff;
+  --accent-gold: #2563eb;
+  --text-light: #111827;
+  --text-gray: #6b7280;
+}
+
+.page-wrapper {
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #f0f9ff 0%, #dbeafe 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
+  z-index: 1;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-icon-circle {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(37, 99, 235, 0.3);
+}
+
+.hero-title {
+  font-size: clamp(2rem, 8vw, 5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  color: var(--text-gray);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-gold {
+  background-color: var(--accent-gold) !important;
+  color: white !important;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.btn-gold:hover {
+  background-color: #1e40af !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+}
+
+.btn-gold:active {
+  transform: translateY(-1px);
+}
+
+/* Stats Section */
+.stats-section {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(37, 99, 235, 0.02));
+  border-top: 1px solid rgba(37, 99, 235, 0.2);
+  border-bottom: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(37, 99, 235, 0.4);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.stat-label {
+  color: var(--text-gray);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.section-subtitle {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: var(--accent-gold);
+}
+
+/* Specializations Section */
+.specializations-section {
+  padding: 5rem 0;
+  background: linear-gradient(180deg, transparent, rgba(37, 99, 235, 0.05), transparent);
+}
+
+.spec-card {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  height: 100%;
+}
+
+.spec-card:hover,
+.spec-card.active {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: var(--accent-gold);
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.3);
+}
+
+.spec-icon {
+  font-size: 3rem;
+  text-align: center;
+  color: #111827;
+}
+
+.spec-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.spec-quote {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-style: italic;
+  color: #6b7280;
+}
+
+/* Featured Services Section */
+.featured-services-section {
+  padding: 5rem 0;
+  background: #ffffff;
+}
+
+/* Gallery Preview Section */
+.gallery-preview-section {
+  padding: 5rem 0;
+  background: rgba(37, 99, 235, 0.03);
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(37, 99, 235, 0.05));
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-radius: 12px;
+  margin: 3rem 0;
+}
+
+.cta-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.cta-subtitle {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: var(--text-gray);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .stat-value {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-icon-circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .stat-value {
+    font-size: 1.8rem;
+  }
+
+  .spec-card {
+    padding: 1.5rem !important;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .cta-title {
+    font-size: 1.8rem;
+  }
+
+  .cta-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    min-height: 80vh;
+  }
+
+  .hero-icon-circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .btn-gold,
+  .btn-outline-warning {
+    width: 100%;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .spec-card {
+    padding: 1rem !important;
+  }
+
+  .spec-icon {
+    font-size: 2rem;
+  }
+
+  .spec-title {
+    font-size: 1.2rem;
+  }
+
+  .spec-quote {
+    font-size: 0.85rem;
+  }
+
+  .cta-section {
+    padding: 2rem 0 !important;
+  }
+
+  .cta-title {
+    font-size: 1.5rem;
+  }
+
+  .cta-subtitle {
+    font-size: 0.9rem;
+  }
+}
