@@ -1,0 +1,94 @@
+.portfolio-page {
+  padding: 3rem 1rem 6rem;
+  color: #fff;
+}
+
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  
+}
+
+.portfolio-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0.75rem;
+  max-width: 1200px;
+  margin: -2.5rem auto 0 auto;
+}
+
+.portfolio-item {
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.03);
+  filter: brightness(0.95);
+}
+
+@media (min-width: 640px) {
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .portfolio-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Latest works */
+.latest-works {
+  margin: 2.5rem 0;
+}
+
+.latest-works h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.latest-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0.75rem;
+}
+
+.latest-item {
+  border: none;
+  padding: 0;
+  background: transparent;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.latest-item img { width: 100%; height: 300px; object-fit: cover; display:block }
+
+@media (min-width:640px) {
+  .latest-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Tabs */
+.portfolio-tabs { display:flex; gap:0; flex-wrap:wrap; margin:-8.5rem auto 2rem auto; justify-content:center; align-items:center; max-width:100%; }
+.tab-btn { background:transparent; color:#999; border:none; padding:0.5rem 1rem; cursor:pointer; font-size:0.95rem; transition:color 0.3s ease; }
+.tab-btn:hover { color:#666; }
+.tab-btn.active { color:#00b050; font-weight:600; border-bottom:2px solid #00b050; padding-bottom:calc(0.5rem - 2px); }
+.tab-divider { color:#ccc; margin:0 0.5rem; }

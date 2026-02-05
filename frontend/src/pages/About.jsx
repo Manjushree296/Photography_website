@@ -50,9 +50,18 @@ const About = () => {
             </div>
           </div>
 
+<div className="feature-box">
+          <span>🏆</span>
+          <div>
+            <h3>Experience</h3>
+            <p>
+              With 25+ years of experience,we have successfully covered 1,500+ events,capturing unforgettable moments with creativity and passion.
+            </p>
+          </div>
         </div>
 
-      </section>
+        </div>
+</section>
 
       {/* ===== TESTIMONIALS ===== */}
       <section className="testimonials">
@@ -63,9 +72,9 @@ const About = () => {
 
           <div className="testimonial-card">
             <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="" />
-            <h4>PRIYA NAYAK</h4>
+            <h4>Preksha</h4>
             <p>
-              Prashanth is a wonderful person and truly professional in his
+              Lathish is a wonderful person and truly professional in his
               skills and field. Very energetic and captured great moments.
             </p>
           </div>

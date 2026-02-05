@@ -1,6 +1,6 @@
 .about-page {
   background: #ffffff;
-  padding: 100px 10%;
+  padding: 40px 10% 60px;
   font-family: "Poppins", sans-serif;
   color: #1a1a1a;
 }
@@ -12,7 +12,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: center;
-  margin-bottom: 130px;
+  margin-bottom: 60px;
 }
 
 .about-image img {
@@ -21,6 +21,7 @@
   object-fit: cover;
   border-radius: 18px;
   box-shadow: 0 30px 70px rgba(0,0,0,0.25);
+  
 }
 
 /* Heading */
@@ -66,7 +67,7 @@
 
 .testimonials {
   text-align: center;
-  margin-bottom: 140px;
+  margin-bottom: 60px;
 }
 
 .testimonials h2 {
@@ -85,7 +86,7 @@
 
 .testimonial-card {
   background: #ffffff;
-  padding: 40px 32px;
+  padding: 10px 32px;
   border-radius: 16px;
   box-shadow: 0 14px 45px rgba(0,0,0,0.10);
   transition: 0.35s ease;
@@ -120,7 +121,7 @@
 
 .google-review {
   text-align: center;
-  padding-bottom: 90px;
+  padding-bottom: 80px;
 }
 
 .google-review img {

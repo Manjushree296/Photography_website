@@ -22,7 +22,7 @@ body{
   top:0;
   width:100%;
   z-index:1000;
-  background:transparent;
+  background: rgba(255,255,255,0.9);
   transition:all 0.3s ease;
   backdrop-filter: saturate(120%) blur(6px);
 }
@@ -38,10 +38,7 @@ body{
 
 nav{ display:flex; gap:28px; align-items:center; }
 
-/* White nav on top of hero */
-.header:not(.scrolled) .nav-link{ color: rgba(255,255,255,0.95); }
-.header:not(.scrolled) .nav-link::after{ background: rgba(255,255,255,0.9); }
-.header:not(.scrolled) .nav-cta{ background: transparent; color: white; border: 1px solid rgba(255,255,255,0.18); }
+/* White nav on top of hero - removed for visibility */
 
 .nav-cta{ background:var(--brand); color:white; padding:9px 16px; border-radius:6px; text-decoration:none; font-weight:700; }
 
@@ -49,6 +46,7 @@ nav{ display:flex; gap:28px; align-items:center; }
   .mobile-toggle{ display:block; }
   nav{ position:fixed; right:12px; top:70px; background: rgba(255,255,255,0.98); box-shadow: 0 10px 30px rgba(2,6,23,0.08); border-radius:10px; padding:14px; flex-direction:column; gap:10px; display:none; }
   nav.open{ display:flex; }
+  .logo img{ height:40px; }
 }
 
 .container{

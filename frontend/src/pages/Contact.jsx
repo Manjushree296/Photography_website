@@ -43,7 +43,7 @@ const Contact = () => {
               <div>
                 <div className="info-title">ADDRESS</div>
                 <p>
-                  Divya Enaclave Building, Shop No. B4,<br />
+                  Divya Enclave Building, Shop No. B4,<br />
                   Opposite Canara College, Jail Road,<br />
                   M G Road, Mangalore – 575003, Karnataka
                 </p>
@@ -54,7 +54,7 @@ const Contact = () => {
               <FiPhone className="icon" />
               <div>
                 <div className="info-title">PHONE</div>
-                <p>+91 98765 43210</p>
+                <p>+91 98452 19355</p>
               </div>
             </div>
 
@@ -62,57 +62,29 @@ const Contact = () => {
               <FiMail className="icon" />
               <div>
                 <div className="info-title">EMAIL</div>
-                <p>contact@lathishphotography.com</p>
+                <p>Lathishphotography@gmail.com</p>
               </div>
             </div>
           </div>
 
-          {/* RIGHT */}
+          {/* RIGHT - Google Map (replacing contact form) */}
           <div>
-            <h2>LEAVE A MESSAGE</h2>
-
-            <form onSubmit={handleSubmit}>
-              <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                value={formData.name}
-                onChange={handleChange}
+            <h2>OUR LOCATION</h2>
+            <div className="map-embed">
+              <iframe
+                title="Lathish Photography Location"
+                src="https://www.google.com/maps?q=Lathish+Photography,+Jail+Rd,+opp.+Canara+College,+Mangaluru&output=embed"
+                width="100%"
+                height="400"
+                style={{ border: 0 }}
+                loading="lazy"
               />
-
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone Number"
-                value={formData.phone}
-                onChange={handleChange}
-              />
-
-              <textarea
-                name="message"
-                rows="5"
-                placeholder="Message"
-                value={formData.message}
-                onChange={handleChange}
-              />
-
-              <button type="submit">SUBMIT</button>
-            </form>
+            </div>
           </div>
 
         </div>
 
-        {/* MAP */}
-        <div className="map">
-          <iframe
-            title="Lathish Photography Location"
-            src="https://www.google.com/maps?q=Lathish+Photography,+Jail+Rd,+opp.+Canara+College,+Mangaluru&output=embed"
-            width="100%"
-            height="400"
-            style={{ border: 0 }}
-            loading="lazy"
-          ></iframe>
-        </div>
+        {/* removed duplicate map: map is now placed in the right column */}
 
       </div>
     </div>

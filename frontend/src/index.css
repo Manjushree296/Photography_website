@@ -19,6 +19,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -26,6 +27,11 @@ body {
   color: var(--text-dark);
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
+}
+
+#root {
+  overflow-x: hidden;
 }
 
 ::selection {

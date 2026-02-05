@@ -16,6 +16,7 @@ import PreWedding from './pages/PreWedding';
 import Baby from './pages/Baby';
 import Maternity from './pages/Maternity';
 import Events from './pages/Events';
+import Portfolio from './pages/Portfolio';
 
 // Component to handle page transitions
 function AnimatedRoutes() {
@@ -33,6 +34,7 @@ function AnimatedRoutes() {
           <Route path="baby" element={<Baby />} />
           <Route path="maternity" element={<Maternity />} />
           <Route path="events" element={<Events />} />
+          <Route path="portfolio" element={<Portfolio />} />
           <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>

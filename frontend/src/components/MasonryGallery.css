@@ -1,8 +1,10 @@
 .masonry-grid{
   column-gap: 16px;
-  padding: 8px 0;
+  padding: 0;
   /* Responsive column counts */
   column-count: 4;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .masonry-item{

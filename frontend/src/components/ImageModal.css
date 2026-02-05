@@ -196,6 +196,27 @@
     margin-bottom: 1rem;
   }
 
+  .modal-close {
+    top: -30px;
+    width: 35px;
+    height: 35px;
+    font-size: 24px;
+  }
+
+  .modal-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+
+  .modal-prev {
+    left: -45px;
+  }
+
+  .modal-next {
+    right: -45px;
+  }
+
   .modal-info h3 {
     font-size: 1rem;
   }

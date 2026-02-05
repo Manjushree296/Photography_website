@@ -27,6 +27,7 @@ const Layout = () => {
     {name:"Home", path:"/"},
     {name:"About", path:"/about"},
     {name:"Services", path:"/services"},
+    {name:"Portfolio", path:"/portfolio"},
   ];
 
   return (
@@ -83,10 +84,10 @@ const Layout = () => {
             <p>We Make Your Memories Special</p>
 
             <div className="socials">
-              <a href="#"><FaWhatsapp/></a>
-              <a href="#"><FaInstagram/></a>
-              <a href="#"><FaYoutube/></a>
-              <a href="#"><FaGoogleDrive/></a>
+              <a href="https://wa.me/919845219355" target="_blank" rel="noopener noreferrer"><FaWhatsapp/></a>
+              <a href="https://www.instagram.com/lathish_photography?igsh=ang5MW5qeDY0ajVz" target="_blank" rel="noopener noreferrer"><FaInstagram/></a>
+              <a href="https://www.youtube.com/@lathishphotography" target="_blank" rel="noopener noreferrer"><FaYoutube/></a>
+              <a href="https://drive.google.com/drive/folders/1B1HeGO3_h6I40DzIuPUhw33e64V9gx_5" target="_blank" rel="noopener noreferrer"><FaGoogleDrive/></a>
             </div>
           </div>
 
@@ -98,6 +99,7 @@ const Layout = () => {
               <Link to="/">Home</Link>
               <Link to="/about">About</Link>
               <Link to="/services">Services</Link>
+              <Link to="/portfolio">Portfolio</Link>
               <Link to="/contact">Contact</Link>
               <a href="#address">Address</a>
             </div>
@@ -106,9 +108,10 @@ const Layout = () => {
           {/* Address */}
           <div id="address">
             <h3>Address</h3>
-            <p>Near City Bus Stand</p>
-            <p>Udupi, Karnataka - 576101</p>
-            <p>Phone: +91 9901864063</p>
+            <p>Divya Enclave Building, Shop No. B4,</p>
+            <p>Opposite Canara College, Jail Road,</p>
+            <p>M G Road, Mangalore – 575003, Karnataka</p>
+            <p>Phone: +91 98765 43210</p>
           </div>
 
         </div>
@@ -121,7 +124,10 @@ const Layout = () => {
 
       {/* ============ WHATSAPP FLOAT ============ */}
       <a
-        href="#"
+        href="https://wa.me/919845219355"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp"
         className="whatsapp-float"
       >
         <FaWhatsapp/>

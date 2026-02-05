@@ -5,7 +5,6 @@ import Gallery from "../components/Gallery";
 import CategoryCard from "../components/CategoryCard";
 import MasonryGallery from "../components/MasonryGallery";
 import Preloader from "../components/Preloader";
-import RecentlyViewed from "../components/RecentlyViewed";
 import { weddingImages, preweddingImages, allGalleryImages } from "../config/galleryImages";
 import hero1 from "../Asset/hero_images/hero_1.jpg";
 import hero2 from "../Asset/hero_images/hero_2.jpg";
@@ -42,12 +41,21 @@ const Home = () => {
     { id: 7, name: "SPECIAL OCCASION", path: "/events", image: specialOccasionCat }
   ];
 
+  const [categoryIndex, setCategoryIndex] = useState(0);
+
   useEffect(() => {
     const timer = setInterval(() => {
       setHeroIndex((prev) => (prev + 1) % heroImages.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [heroImages.length]);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCategoryIndex((prev) => (prev + 1) % categoriesWithImages.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
 
   const handlePrev = () => {
     setHeroIndex((prev) => (prev - 1 + heroImages.length) % heroImages.length);
@@ -108,35 +116,24 @@ const Home = () => {
         </div>
       </section>
 
-      {/* TOP SERVICES - Floating Cards */}
-      <section className="top-services">
-        <div className="service-box">
-          <div className="service-image-wrapper">
-            <img src={photographyCard} alt="Photography"/>
-          </div>
-          <h3>PHOTOGRAPHY</h3>
-          <p>Capturing timeless moments with professional expertise and artistic vision. We specialize in documenting your most precious memories with stunning clarity and emotion.</p>
-        </div>
-
-        <div className="service-box">
-          <div className="service-image-wrapper">
-            <img src={videographyCard} alt="Videography"/>
-          </div>
-          <h3>VIDEOGRAPHY</h3>
-          <p>Creating cinematic stories that bring your special moments to life. Our videography combines cutting-edge technology with creative storytelling for unforgettable results.</p>
-        </div>
-
-        <div className="service-box">
-          <div className="service-image-wrapper">
-            <img src={editingCard} alt="Editing"/>
-          </div>
-          <h3>EDITING</h3>
-          <p>Transforming raw footage into masterpieces through professional editing and post-production. Every frame is perfected to bring out the beauty and emotion of your story.</p>
-        </div>
-      </section>
-
-      {/* CATEGORIES - grid layout */}
+      {/* CATEGORIES - slideshow */}
       <section className="categories-slider-section">
+
+        {/* All our work placeholder */}
+        <section className="work-section">
+          <h2>All our work</h2>
+          <MasonryGallery images={allImages} />
+        </section>
+
+        {/* Google Drive Logo Section */}
+        <section className="google-drive-section">
+          <div className="google-drive-container">
+            <a href="https://drive.google.com/drive/folders/1B1HeGO3_h6I40DzIuPUhw33e64V9gx_5" target="_blank" rel="noopener noreferrer" className="google-drive-link">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Google_Drive_icon_%282020%29.svg" alt="Google Drive" className="google-drive-logo" />
+              <span>CLICK HERE TO VIEW OUR DETAILED PHOTOSHOOT</span>
+            </a>
+          </div>
+        </section>
 
         <div className="categories-head">
           <div>
@@ -145,10 +142,35 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="categories-grid">
-          {categoriesWithImages.map((cat) => (
-            <CategoryCard key={cat.id} to={cat.path} image={cat.image} name={cat.name} />
-          ))}
+        <div className="categories-slideshow">
+          <div className="categories-carousel-wrapper">
+            <button className="category-prev" onClick={() => {
+              const carousel = document.querySelector('.categories-list');
+              carousel.scrollBy({ left: -300, behavior: 'smooth' });
+            }}>
+              <FaChevronLeft />
+            </button>
+
+            <div className="categories-carousel">
+              <div className="categories-list">
+                {categoriesWithImages.map((cat) => (
+                  <Link key={cat.id} to={cat.path} className="cat-link">
+                    <div className="cat-item">
+                      <img src={cat.image} alt={cat.name} />
+                      <h4>{cat.name}</h4>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <button className="category-next" onClick={() => {
+              const carousel = document.querySelector('.categories-list');
+              carousel.scrollBy({ left: 300, behavior: 'smooth' });
+            }}>
+              <FaChevronRight />
+            </button>
+          </div>
         </div>
 
         {/* YouTube promo */}
@@ -160,19 +182,11 @@ const Home = () => {
               <p>For Videography visit our YouTube channel — Pre wedding videography in Mangalore</p>
             </div>
           </div>
-          <a className="youtube-btn" href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="Visit our YouTube channel">Visit Channel</a>
-        </section>
-
-        {/* All our work placeholder */}
-        <section className="work-section">
-          <h2>All our work</h2>
-          <MasonryGallery images={allImages} />
+          <a className="youtube-btn" href="https://www.youtube.com/@lathishphotography" target="_blank" rel="noreferrer" aria-label="Visit our YouTube channel">Visit Channel</a>
         </section>
 
       </section>
 
-      {/* RECENTLY VIEWED GALLERY */}
-      <RecentlyViewed />
       </div>
     </>
   );
